@@ -7,9 +7,17 @@
     <ContentView.Content>
 
         <Grid Padding="25">
-            <Frame BorderColor="{StaticResource Primary}" HasShadow="True" BackgroundColor="White">
+            <Frame BorderColor="{StaticResource Primary}" HasShadow="True">
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
+                        <GradientStop Color="White" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+             
                 <Grid RowDefinitions="50,*,75" ColumnDefinitions="*">
-                    
+
+                 
                     <Label Grid.Row="0" Text="{Binding Title}"
                           
                      VerticalOptions="Center" 
