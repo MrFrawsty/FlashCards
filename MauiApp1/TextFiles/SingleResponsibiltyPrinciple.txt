@@ -1,0 +1,1 @@
+Each method and class should have only one job.A class should only change for one reason.Folder structuring and naming is important.Makes managing things easier.

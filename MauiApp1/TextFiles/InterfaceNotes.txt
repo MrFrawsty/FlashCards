@@ -1,0 +1,5 @@
+Think of it as a contract. 
+No implementation in interface, ie can contain no logic.
+Implementing class must implement at least everything in interface (can have more). Naming convention capital ‘I’ then pascal case.
+All members are implicitly public and cannot be changed. Interfaces can implement other interfaces. Classes can implement more than one interface.
+A class can inherit from another class as well as implement an interface.

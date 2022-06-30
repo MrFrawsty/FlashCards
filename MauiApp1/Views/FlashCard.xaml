@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashCards.Views.FlashCard" xmlns:models="clr-namespace:FlashCards.Models" 
+             x:DataType="models:FlashCardModel"
+             >
+    <ContentView.Content>
+
+        <Grid Padding="25">
+            <Frame BorderColor="{StaticResource Primary}" HasShadow="True" BackgroundColor="White">
+                <Grid RowDefinitions="50,*,75" ColumnDefinitions="*">
+                    
+                    <Label Grid.Row="0" Text="{Binding Title}"
+                          
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                           FontSize="Large"
+                           FontFamily="BookerlyBold"
+                           TextColor="Blue"
+                           FontAttributes="Bold"
+                           Margin="0,0,0,15"/>
+
+                    <CollectionView Grid.Row="1" ItemsSource="{Binding BulletPoints}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding .}"
+                                       FontFamily="Bookerly"
+                                       FontSize="Medium"
+                                       Margin="2,2,2,4"
+                                       FlowDirection="LeftToRight"
+                                       />
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                        
+                        
+                    </CollectionView>
+
+                    <Image
+                        Grid.Row="3"
+                        Source="csharplogo.png"
+                        Aspect="AspectFill"
+                        Margin="0,5,5,5"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"/>
+                    
+
+
+
+                </Grid>
+
+
+
+            </Frame>
+        </Grid>
+
+    </ContentView.Content>
+
+</ContentView>

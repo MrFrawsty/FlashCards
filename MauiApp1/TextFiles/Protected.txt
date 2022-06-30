@@ -1,0 +1,5 @@
+Protected is accessible within the class it’s defined, and all classes that inherit from it.
+Protected is not accessible from other assemblies directly, it must be inherited from.
+Protected is basically private, except for classes that inherit from it.
+Protected can be accessed from classes that inherit from it in outside assemblies.
+
