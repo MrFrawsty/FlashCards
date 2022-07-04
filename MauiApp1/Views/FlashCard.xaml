@@ -10,8 +10,8 @@
             <Frame BorderColor="{StaticResource Primary}" HasShadow="True">
                 <Frame.Background>
                     <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
                         <GradientStop Color="White" Offset="1.0"/>
+                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
                     </LinearGradientBrush>
                 </Frame.Background>
              
@@ -32,6 +32,7 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Label Text="{Binding .}"
+                                       TextColor="Black"
                                        FontFamily="Bookerly"
                                        FontSize="Medium"
                                        Margin="2,2,2,4"

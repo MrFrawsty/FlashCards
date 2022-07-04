@@ -4,9 +4,9 @@
              x:Class="MauiApp1.MainPage" xmlns:ViewCell="clr-namespace:FlashCards.Views"
              >
     <ContentPage.Background>
-        <LinearGradientBrush EndPoint="0.1">
-            <GradientStop Color="{StaticResource Primary}" Offset="0.1"/>
-            <GradientStop Color="{StaticResource Tertiary}" Offset="1.0"/>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="{StaticResource GradientStart}" Offset="0.1"/>
+            <GradientStop Color="{StaticResource GradientEnd}  " Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 			 
