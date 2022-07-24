@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage" xmlns:ViewCell="clr-namespace:FlashCards.Views"
+             xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
+             x:DataType="viewModels:SelectedTopicViewModel"
              >
     <ContentPage.Background>
         <LinearGradientBrush EndPoint="0,1">
@@ -9,8 +11,10 @@
             <GradientStop Color="{StaticResource GradientEnd}  " Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-			 
-    <CarouselView ItemsSource="{Binding flashCards}">
+    
+        
+        
+    <CarouselView ItemsSource="{Binding SelectedTopic.Flashcards}">
         <CarouselView.ItemTemplate>
             <DataTemplate>
                 <ViewCell:FlashCard/>
@@ -18,5 +22,7 @@
         </CarouselView.ItemTemplate>
     
     </CarouselView>
+        
+   
  
 </ContentPage>

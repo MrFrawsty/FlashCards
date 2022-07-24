@@ -48,6 +48,7 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Bookerly-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Bookerly.ttf" />
@@ -68,12 +69,21 @@
 	  <EmbeddedResource Include="TextFiles\SingleResponsibiltyPrinciple.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </EmbeddedResource>
+	 
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview4" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\FlashCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\TopicCard.xaml">
+	    <Generator></Generator>
+	  </MauiXaml>
+	
 	</ItemGroup>
 
 </Project>

@@ -10,7 +10,7 @@ namespace FlashCards.Models
     {
         public string Title { get; set; }
 
-        public List<string> BulletPoints { get; set; }
+        public string Note { get; set; }
 
 
     }

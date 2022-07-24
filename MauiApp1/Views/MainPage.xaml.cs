@@ -1,23 +1,27 @@
-﻿using FlashCards.ViewModels;
+﻿using FlashCards.Services;
+using FlashCards.ViewModels;
 
 namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
 
-	MainViewModel mainViewModel;
+	
 
 	public MainPage()
 	{
 		
 		InitializeComponent();
 
-		BindingContext = mainViewModel = new MainViewModel();
+		BindingContext = ServiceHelper.GetService<SelectedTopicViewModel>();
 		
 	}
 
-	
 
+    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    {
+        base.OnNavigatedTo(args);
+    }
 
 }
 

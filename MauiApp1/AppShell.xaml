@@ -4,19 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp1"
+    xmlns:other="clr-namespace:FlashCards.Views"
+    
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
       
 
-        <Tab Title="Home">
+        <Tab Title="All Topics">
             <ShellContent
-             Title="Home"
-             ContentTemplate="{DataTemplate local:MainPage}"
-             Route="MainPage" />
+             
+            ContentTemplate="{DataTemplate other:TopicsPage}"
+             Route="TopicsView" />
         </Tab>
-        <Tab Title="Topics">
+        
+        <Tab Title="Current Topic">
             <ShellContent
-             Title="Home"
+             
              ContentTemplate="{DataTemplate local:MainPage}"
              Route="MainPage" />
         </Tab>

@@ -7,7 +7,7 @@
     <ContentView.Content>
 
         <Grid Padding="25">
-            <Frame BorderColor="{StaticResource Primary}" HasShadow="True">
+            <Frame BorderColor="{StaticResource Primary}" HasShadow="True" >
                 <Frame.Background>
                     <LinearGradientBrush EndPoint="0,1">
                         <GradientStop Color="White" Offset="1.0"/>
@@ -15,7 +15,7 @@
                     </LinearGradientBrush>
                 </Frame.Background>
              
-                <Grid RowDefinitions="50,*,75" ColumnDefinitions="*">
+                <Grid RowDefinitions="50,*,75" >
 
                  
                     <Label Grid.Row="0" Text="{Binding Title}"
@@ -28,21 +28,21 @@
                            FontAttributes="Bold"
                            Margin="0,0,0,15"/>
 
-                    <CollectionView Grid.Row="1" ItemsSource="{Binding BulletPoints}">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Label Text="{Binding .}"
+                   
+                                <Label Grid.Row="1"
+                                    
+                                       Text="{Binding Note}"
+                                       VerticalOptions="Center"
+                                       
                                        TextColor="Black"
                                        FontFamily="Bookerly"
-                                       FontSize="Medium"
-                                       Margin="2,2,2,4"
+                                       FontSize="Large"
+                                       Margin="4,2,4,4"
                                        FlowDirection="LeftToRight"
                                        />
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                        
-                        
-                    </CollectionView>
+
+
+                    
 
                     <Image
                         Grid.Row="3"

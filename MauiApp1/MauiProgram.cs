@@ -1,11 +1,16 @@
-﻿namespace MauiApp1;
+﻿using FlashCards.Interfaces;
+using FlashCards.Services;
+using FlashCards.ViewModels;
+using FlashCards.Views;
+
+namespace MauiApp1;
 
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+		builder	
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
@@ -15,6 +20,15 @@ public static class MauiProgram
                 fonts.AddFont("Bookerly-Bold.ttf", "bookerlyBold");
             });
 
-		return builder.Build();
+		builder.Services.AddSingleton<INoteSeparator, NoteSeparator>();
+		builder.Services.AddSingleton<IFlashCardLoader, FlashCardLoader>();
+		builder.Services.AddSingleton<ITopicLoader, TopicLoader>();
+		builder.Services.AddSingleton<TopicsPage>();
+		builder.Services.AddSingleton<TopicsViewModel>();
+        builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<SelectedTopicViewModel>();
+
+
+        return builder.Build();
 	}
 }

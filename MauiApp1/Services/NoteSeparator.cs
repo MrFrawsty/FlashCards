@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using FlashCards.Interfaces;
 
 namespace FlashCards.Services
 {
-    public class NoteSeparator
+    public class NoteSeparator : INoteSeparator
     {
         public List<string> SeparateNotes(string text)
         {
@@ -17,7 +18,7 @@ namespace FlashCards.Services
 
             var matches = regex.Matches(text);
 
-            foreach(var match in matches)
+            foreach (var match in matches)
             {
                 list.Add(match.ToString());
             }
