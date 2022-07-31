@@ -5,17 +5,13 @@
              xmlns:ViewCell="clr-namespace:FlashCards.Views"
              xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
              xmlns:models="clr-namespace:FlashCards.Models"
+             BackgroundImageSource="test_bg.png"
             >
 
-    <ContentPage.Background>
-        <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="{StaticResource GradientStart}" Offset="0.1"/>
-            <GradientStop Color="{StaticResource GradientEnd}  " Offset="1.0"/>
-        </LinearGradientBrush>
-    </ContentPage.Background>
+  
 
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
             <CollectionView ItemsSource="{Binding Topics}" SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
@@ -34,22 +30,44 @@
                                 <Frame.Background>
                                     <LinearGradientBrush EndPoint="0,1">
                                         <GradientStop Color="White" Offset="1.0"/>
-                                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
+                                        <GradientStop Color="{StaticResource Gray100}" Offset="0.1"/>
                                     </LinearGradientBrush>
                                 </Frame.Background>
 
-                                <Grid>
+                                <Grid RowDefinitions="50*,30*,*" ColumnDefinitions="*,*,*">
 
 
-                                    <Label Grid.Row="0" Text="{Binding TopicName}"
+                                    <Label Grid.Row="0"
+                                           Grid.ColumnSpan="3"
+                                           Text="{Binding TopicName}"
                     
                                         VerticalOptions="Center" 
                                         HorizontalOptions="Center"
                                         FontSize="Large"
                                         FontFamily="BookerlyBold"
-                                        TextColor="{StaticResource TertiaryDark}"
+                                        TextColor="{StaticResource Black}"
                                         FontAttributes="Bold"
                                         Margin="0,0,0,15"/>
+
+                                    <Image
+                                    Grid.Row="2"
+                                        Grid.Column="1"
+                                    Aspect="AspectFill"
+                                    Margin="0,30,0,10"
+                                    HeightRequest="35"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End">  
+
+                                        <Image.Source>
+                                            <FontImageSource Glyph="&#xf121;"
+                                             FontFamily="FontAwesomeSolid"
+                                             Size="44"
+                                             Color="{StaticResource Tertiary}"/>
+
+                                        </Image.Source>
+
+                                    </Image>
 
                                 </Grid>
 
@@ -59,6 +77,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

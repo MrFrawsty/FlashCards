@@ -35,6 +35,9 @@ namespace FlashCards.ViewModels
             topicLoader.AddTopic("SingleResponsibiltyPrinciple.txt", "Single Responsibility Principle");
             topicLoader.AddTopic("Protected.txt", "Protected Access Modifier");
             topicLoader.AddTopic("InterfaceNotes.txt", "Interfaces");
+            topicLoader.AddTopic("SingleResponsibiltyPrinciple.txt", "Single Responsibility Principle");
+            topicLoader.AddTopic("Protected.txt", "Protected Access Modifier");
+            topicLoader.AddTopic("InterfaceNotes.txt", "Interfaces");
             Topics = topicLoader.GetTopics();
         }
 
