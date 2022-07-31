@@ -52,6 +52,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Bookerly-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Bookerly.ttf" />
+	  <None Remove="Resources\Fonts\FontAwesomeRegular.otf" />
+	  <None Remove="Resources\Fonts\FontAwesomeSolid.otf" />
 	  <None Remove="Resources\Images\CSharpLogo.png" />
 	  <None Remove="TextFiles\InterfaceNotes.txt" />
 	  <None Remove="TextFiles\Protected.txt" />

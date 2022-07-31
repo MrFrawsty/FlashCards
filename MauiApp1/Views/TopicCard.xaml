@@ -11,7 +11,7 @@
                
                 <Frame.Background>
                     <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="White" Offset="1.0"/>
+                        <GradientStop Color="LightGray" Offset="1.0"/>
                         <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
                     </LinearGradientBrush>
                 </Frame.Background>
@@ -25,7 +25,7 @@
                      HorizontalOptions="Center"
                            FontSize="Large"
                            FontFamily="BookerlyBold"
-                           TextColor="Blue"
+                           TextColor="{StaticResource DarkerDark}"
                            FontAttributes="Bold"
                            Margin="0,0,0,15"/>
 

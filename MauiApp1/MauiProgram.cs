@@ -18,6 +18,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				fonts.AddFont("Bookerly.ttf", "bookerly");
                 fonts.AddFont("Bookerly-Bold.ttf", "bookerlyBold");
+				fonts.AddFont("FontAwesomeRegular.otf", "FontAwesomeRegular");
+                fonts.AddFont("FontAwesomeSolid.otf", "FontAwesomeSolid");
             });
 
 		builder.Services.AddSingleton<INoteSeparator, NoteSeparator>();

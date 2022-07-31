@@ -24,7 +24,7 @@
                      HorizontalOptions="Center"
                            FontSize="Large"
                            FontFamily="BookerlyBold"
-                           TextColor="Blue"
+                           TextColor="{StaticResource TertiaryDark}"
                            FontAttributes="Bold"
                            Margin="0,0,0,15"/>
 
@@ -33,7 +33,9 @@
                                     
                                        Text="{Binding Note}"
                                        VerticalOptions="Center"
-                                       
+                                       HorizontalOptions="Center"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center"
                                        TextColor="Black"
                                        FontFamily="Bookerly"
                                        FontSize="Large"
@@ -42,18 +44,27 @@
                                        />
 
 
-                    
 
                     <Image
-                        Grid.Row="3"
-                        Source="csharplogo.png"
+                        Grid.Row="3"                        
                         Aspect="AspectFill"
                         Margin="0,5,5,5"
                         HeightRequest="50"
-                        WidthRequest="50"
+                        WidthRequest="75"
                         HorizontalOptions="Start"
-                        VerticalOptions="End"/>
-                    
+                        VerticalOptions="End">
+
+                        <Image.Source>
+                            <FontImageSource Glyph="&#xf121;"
+                                             FontFamily="FontAwesomeSolid"
+                                             Size="44"
+                                             Color="{StaticResource Tertiary}"/>
+
+                        </Image.Source>
+
+                    </Image>
+
+
 
 
 

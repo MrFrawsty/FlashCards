@@ -6,7 +6,7 @@
              xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
              xmlns:models="clr-namespace:FlashCards.Models"
             >
-    
+
     <ContentPage.Background>
         <LinearGradientBrush EndPoint="0,1">
             <GradientStop Color="{StaticResource GradientStart}" Offset="0.1"/>
@@ -17,7 +17,7 @@
     <ContentPage.Content>
         <StackLayout>
             <CollectionView ItemsSource="{Binding Topics}" SelectionMode="None">
-               
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate  x:DataType="models:TopicModel">
 
@@ -42,19 +42,16 @@
 
 
                                     <Label Grid.Row="0" Text="{Binding TopicName}"
-                          
-                     VerticalOptions="Center" 
-                     HorizontalOptions="Center"
-                           FontSize="Large"
-                           FontFamily="BookerlyBold"
-                           TextColor="Blue"
-                           FontAttributes="Bold"
-                           Margin="0,0,0,15"/>
-
+                    
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="Center"
+                                        FontSize="Large"
+                                        FontFamily="BookerlyBold"
+                                        TextColor="{StaticResource TertiaryDark}"
+                                        FontAttributes="Bold"
+                                        Margin="0,0,0,15"/>
 
                                 </Grid>
-
-
 
                             </Frame>
                         </Grid>
