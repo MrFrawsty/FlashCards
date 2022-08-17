@@ -5,25 +5,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiApp1"
     xmlns:other="clr-namespace:FlashCards.Views"
-    
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-      
 
-        <Tab Title="All Topics">
+        <Tab Title="All Categories">
+            <ShellContent
+             
+            ContentTemplate="{DataTemplate other:CategoriesPage}"
+             Route="CategoriesPage" />
+        </Tab>
+
+        <Tab Title="Topics">
             <ShellContent
              
             ContentTemplate="{DataTemplate other:TopicsPage}"
-             Route="TopicsView" />
+             Route="SelectedCategoryPage" />
         </Tab>
-        
+
+
         <Tab Title="Current Topic">
             <ShellContent
-             
-             ContentTemplate="{DataTemplate local:MainPage}"
-             Route="MainPage" />
+             ContentTemplate="{DataTemplate other:SelectedTopicPage}"
+             Route="SelectedTopicPage" />
         </Tab>
         
     </TabBar>
+    
+   
 
 </Shell>

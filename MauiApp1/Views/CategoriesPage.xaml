@@ -1,28 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlashCards.Views.TopicsPage"
-             xmlns:ViewCell="clr-namespace:FlashCards.Views"
+             x:Class="FlashCards.Views.CategoriesPage"
              xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
              xmlns:models="clr-namespace:FlashCards.Models"
-             BackgroundImageSource="test_bg.png"
-             >
-
-  
-
+             BackgroundImageSource="test_bg.png">
+    
     <ContentPage.Content>
         <Grid>
-            <CollectionView ItemsSource="{Binding SelectedCategory.TopicModels}" SelectionMode="None">
+            <CollectionView ItemsSource="{Binding Categories}" SelectionMode="None">
 
                 <CollectionView.ItemTemplate>
-                    <DataTemplate  x:DataType="models:TopicModel">
+                    <DataTemplate  x:DataType="models:CategoryModel">
 
                         <Grid Padding="25">
                             <Frame BorderColor="{StaticResource Primary}" HasShadow="True">
 
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer NumberOfTapsRequired="1" 
-                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=SelectTopicCommand}"
+                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:CategoriesViewModel}}, Path=SelectCategoryCommand}"
                                           CommandParameter="{Binding .}">
                                     </TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
@@ -39,7 +35,7 @@
 
                                     <Label Grid.Row="0"
                                            Grid.ColumnSpan="3"
-                                           Text="{Binding TopicName}"
+                                           Text="{Binding CategoryName}"
                     
                                         VerticalOptions="Center" 
                                         HorizontalOptions="Center"
@@ -57,7 +53,7 @@
                                     HeightRequest="35"
                                     WidthRequest="50"
                                     HorizontalOptions="Center"
-                                    VerticalOptions="End">  
+                                    VerticalOptions="End">
 
                                         <Image.Source>
                                             <FontImageSource Glyph="&#xf121;"

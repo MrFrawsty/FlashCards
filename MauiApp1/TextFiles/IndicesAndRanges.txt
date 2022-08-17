@@ -1,0 +1,2 @@
+Makes finding specific indices in collections easier and cleaner.
+Makes finding ranges in collections easier and cleaner.

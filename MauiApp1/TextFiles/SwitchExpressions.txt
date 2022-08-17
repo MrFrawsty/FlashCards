@@ -1,0 +1,3 @@
+A switch statement written like a lambda expression.
+Makes quick and simple switch statements more compact.
+Cannot perform multiple actions like in a switch statement, will simply perform one of the actions for whichever case it matches.

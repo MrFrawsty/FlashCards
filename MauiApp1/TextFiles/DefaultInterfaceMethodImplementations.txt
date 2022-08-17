@@ -1,0 +1,5 @@
+Enables you to add new methods to existing interfaces without breaking them by defining a default method implementation.
+Very similar to virtual methods in inheritance.
+Do not need to use the override keyword when overriding the default implementation.
+To access default implementations the class must be an instance of the interface type, not just an implementing class.
+Allows parameterization of default methods with static members, but this should generally be avoided.

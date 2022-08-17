@@ -1,0 +1,8 @@
+If S is a subtype of T, then object of type T may be replaced with object of type S without breaking the program. In other words if a class inherits from another class, then that class should be able to be swapped out with the class it’s inheriting from without anything breaking.
+If Cat() inherits from Animal(), then List<Animal>() should also be able to be initialized with List<Cat>();.
+Covariance is talking about return types. You can’t change return types of inherited methods.
+Contravariance is talking about input types. You can’t change input types of inherited methods.
+Preconditions cannot be strengthened in subtype. 
+Postconditions cannot be weakened in subtype.
+Cannot add new exceptions in subtypes.
+Use interfaces to extend upon inherited base classes for extra functionality. 

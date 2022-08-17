@@ -1,0 +1,9 @@
+
+Allows you to “add” methods to existing types without creating a derived type, re-compiling or otherwise modifying the original type.
+
+They are static methods, but are called as if they are instance methods on the extended type.
+
+The most standard extension methods are LINQ query operators.
+
+You can use extension methods to extend classes or interfaces but never to override them, an extension method with the same signature and name as an interface or class method will never be called.
+

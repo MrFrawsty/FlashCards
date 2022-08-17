@@ -2,9 +2,11 @@
 
 namespace FlashCards.Interfaces
 {
-    internal interface IFlashCardLoader
+    public interface IFlashCardLoader
     {
-        List<FlashCardModel> CreateFlashCardsForTopic(string fileName, string title);
+        List<FlashCardModel> CreateFlashCardsForTopic(string fileName, string cardHeader, string topicName);
+
+        public void AddMoreFlashCards(List<FlashCardModel> flashCards, string fileName, string topicName, string cardHeader);
     }
 
 }

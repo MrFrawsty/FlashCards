@@ -1,14 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlashCards.Views.TopicsPage"
-             xmlns:ViewCell="clr-namespace:FlashCards.Views"
-             xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
+             x:Class="FlashCards.Views.SelectedCategoryPage" 
+              xmlns:viewModels="clr-namespace:FlashCards.ViewModels"
              xmlns:models="clr-namespace:FlashCards.Models"
-             BackgroundImageSource="test_bg.png"
+             x:DataType="viewModels:SelectedCategoryViewModel"
              >
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="{StaticResource GradientStart}" Offset="0.1"/>
+            <GradientStop Color="{StaticResource GradientEnd}  " Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
-  
 
     <ContentPage.Content>
         <Grid>
@@ -22,7 +26,7 @@
 
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer NumberOfTapsRequired="1" 
-                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:TopicsViewModel}}, Path=SelectTopicCommand}"
+                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SelectedCategoryViewModel}}, Path=SelectCategoryCommand}"
                                           CommandParameter="{Binding .}">
                                     </TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
@@ -57,7 +61,7 @@
                                     HeightRequest="35"
                                     WidthRequest="50"
                                     HorizontalOptions="Center"
-                                    VerticalOptions="End">  
+                                    VerticalOptions="End">
 
                                         <Image.Source>
                                             <FontImageSource Glyph="&#xf121;"
@@ -79,4 +83,6 @@
             </CollectionView>
         </Grid>
     </ContentPage.Content>
+
+
 </ContentPage>

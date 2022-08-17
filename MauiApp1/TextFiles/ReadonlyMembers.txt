@@ -1,0 +1,1 @@
+Allows members of structs to be made readonly which prevents the compiler from defensively creating a copy of the struct in case the member is changed via a method.

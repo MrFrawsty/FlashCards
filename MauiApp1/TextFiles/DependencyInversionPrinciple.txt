@@ -1,0 +1,7 @@
+High level modules should not depend on low level modules, but rather both should depend on abstractions, and those abstractions should not depend on details.
+High level module meaning a class that’s calling another class and therefore depends on that class existing.
+Low level is a class that does not call another class and does not depend on anything.
+“Dependency Inversion” is the principle while “Dependency Injection” is a way of implementing that principle.
+Every time you use the ‘new’ keyword you’re creating a tightly coupled dependency.
+DI expects that newing up classes should be done in a central place that’s easy to swap things out.
+One way of removing ‘new’ calls is by giving the class private interfaces and ‘injecting’ the interface through the constructor via a factory or dependency injection container.

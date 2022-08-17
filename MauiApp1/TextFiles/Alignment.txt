@@ -1,0 +1,2 @@
+Imagine each UI element has a row and column.
+Keep columns aligned with each other so as to not have several different columns.

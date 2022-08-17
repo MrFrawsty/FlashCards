@@ -1,0 +1,4 @@
+Defined as being ‘in a strikingly different state from something else’.
+Images and text should have a contrast ratio of at least four point five to one.
+Large text should have a contrast ratio of at least three to one.
+

@@ -13,39 +13,24 @@ using MauiApp1;
 
 namespace FlashCards.ViewModels
 {
+    [QueryProperty(nameof(SelectedCategory), "SelectedCategory")]
     public partial class TopicsViewModel : ObservableObject
     {
-        ITopicLoader topicLoader;
-     
-     //   public  Command SelectTopicCommand { get; }
-        public List<TopicModel> Topics { get; set; }
-
-        public TopicsViewModel()
+        CategoryModel selectedCategory;
+        public CategoryModel SelectedCategory
         {
-            topicLoader = ServiceHelper.GetService<ITopicLoader>();
-            
-            LoadAllTopics();
- 
-         // SelectTopicCommand = new Command<TopicModel>(async (topicModel) => await SelectTopic(topicModel));
-        }
-
-
-        internal void LoadAllTopics()
-        {
-            topicLoader.AddTopic("SingleResponsibiltyPrinciple.txt", "Single Responsibility Principle");
-            topicLoader.AddTopic("Protected.txt", "Protected Access Modifier");
-            topicLoader.AddTopic("InterfaceNotes.txt", "Interfaces");
-            topicLoader.AddTopic("SingleResponsibiltyPrinciple.txt", "Single Responsibility Principle");
-            topicLoader.AddTopic("Protected.txt", "Protected Access Modifier");
-            topicLoader.AddTopic("InterfaceNotes.txt", "Interfaces");
-            Topics = topicLoader.GetTopics();
+            get => selectedCategory;
+            set
+            {
+                selectedCategory = value;
+                OnPropertyChanged();
+            }
         }
 
         [RelayCommand]
         async Task SelectTopic(TopicModel selectedTopic)
         {
-
-            await Shell.Current.GoToAsync($"///MainPage", new Dictionary<string, object>
+            await Shell.Current.GoToAsync($"///SelectedTopicPage", new Dictionary<string, object>
             {
                 ["SelectedTopic"] = selectedTopic
             });

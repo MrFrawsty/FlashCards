@@ -10,13 +10,14 @@ namespace FlashCards.Models
     {
         public string TopicName { get; set; }
 
-        public List<FlashCardModel> Flashcards { get; set; }
+        public List<FlashCardModel> FlashCards { get; set; }
+
 
         public TopicModel(string topicName, List<FlashCardModel> flashCards)
         {
             TopicName = topicName;
-            Flashcards = flashCards;
-        }
+            FlashCards = flashCards;
 
+        }
     }
 }

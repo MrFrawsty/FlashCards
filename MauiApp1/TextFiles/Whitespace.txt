@@ -1,0 +1,3 @@
+Try to keep equal amounts of whitespace inside of containers.
+Margin controls whitespace outside of the element.
+Padding controls whitespace inside of the element.

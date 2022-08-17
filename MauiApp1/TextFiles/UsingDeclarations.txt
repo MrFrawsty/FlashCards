@@ -1,0 +1,3 @@
+Allows for a declaration of a using statement instead of creating one with curly braces.
+Object being used is disposed of at the end of the scope of the method it was declared in by calling the object’s Dispose method.
+Removes the need to nest using statements making it easier to read.

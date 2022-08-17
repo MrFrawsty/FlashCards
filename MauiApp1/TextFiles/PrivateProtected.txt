@@ -1,0 +1,2 @@
+Private protected is accessible from the class it’s declared in, as well as classes that inherit from it.
+Private protected cannot be accessed from classes that inherit from it and reside in outside assemblies.

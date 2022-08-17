@@ -24,10 +24,14 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<INoteSeparator, NoteSeparator>();
 		builder.Services.AddSingleton<IFlashCardLoader, FlashCardLoader>();
-		builder.Services.AddSingleton<ITopicLoader, TopicLoader>();
-		builder.Services.AddSingleton<TopicsPage>();
+        builder.Services.AddSingleton<ICategoryLoader, CategoryLoader>();
+        builder.Services.AddSingleton<TopicsPage>();
 		builder.Services.AddSingleton<TopicsViewModel>();
-        builder.Services.AddTransient<MainPage>();
+		builder.Services.AddSingleton<CategoriesPage>();
+		builder.Services.AddTransient<CategoriesViewModel>();
+        builder.Services.AddSingleton<SelectedCategoryPage>();
+		builder.Services.AddTransient <SelectedCategoryViewModel>();
+        builder.Services.AddTransient<SelectedTopicPage>();
         builder.Services.AddTransient<SelectedTopicViewModel>();
 
 

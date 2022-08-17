@@ -1,0 +1,5 @@
+A client should not be forced to depend on interfaces they don’t use.
+Instead of a giant all encompassing interface, break it down into a separate interface for each different part. 
+Segregate the interfaces from one another.
+To connect two different interfaces, create a third empty interface that implements both so when creating concrete class or using DI it can implement one single interface without casting.
+If a class is dependent on an interface it doesn’t use, any changes to the interface or classes that do use it will force changes in the class.

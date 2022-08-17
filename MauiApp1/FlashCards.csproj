@@ -56,12 +56,39 @@
 	  <None Remove="Resources\Fonts\FontAwesomeSolid.otf" />
 	  <None Remove="Resources\Images\CSharpLogo.png" />
 	  <None Remove="Resources\Images\test_bg.png" />
+	  <None Remove="TextFiles\Alignment.txt" />
+	  <None Remove="TextFiles\Contrast.txt" />
+	  <None Remove="TextFiles\DefaultInterfaceMethodImplementations.txt" />
+	  <None Remove="TextFiles\DependencyInversionPrinciple.txt" />
+	  <None Remove="TextFiles\ExtensionMethods.txt" />
+	  <None Remove="TextFiles\IndicesAndRanges.txt" />
 	  <None Remove="TextFiles\InterfaceNotes.txt" />
+	  <None Remove="TextFiles\InterfaceSegregationPrinciple.txt" />
+	  <None Remove="TextFiles\LiskovSubstitutionPrinciple.txt" />
+	  <None Remove="TextFiles\OpenClosedPrinciple.txt" />
+	  <None Remove="TextFiles\PrivateProtected.txt" />
 	  <None Remove="TextFiles\Protected.txt" />
-	  <None Remove="TextFiles\SingleResponsibiltyPrinciple.txt" />
+	  <None Remove="TextFiles\ReadonlyMembers.txt" />
+	  <None Remove="TextFiles\SingleResponsibilityPrinciple.txt" />
+	  <None Remove="TextFiles\SwitchExpressions.txt" />
+	  <None Remove="TextFiles\UsingDeclarations.txt" />
+	  <None Remove="TextFiles\Whitespace.txt" />
+	</ItemGroup>
+
+	
+	<ItemGroup>
+	  <EmbeddedResource Include="TextFiles\Alignment.txt" />
+	  <EmbeddedResource Include="TextFiles\Contrast.txt" />
+	  <EmbeddedResource Include="TextFiles\DefaultInterfaceMethodImplementations.txt" />
+	  <EmbeddedResource Include="TextFiles\DependencyInversionPrinciple.txt" />
+	  <EmbeddedResource Include="TextFiles\ExtensionMethods.txt" />
+	  <EmbeddedResource Include="TextFiles\IndicesAndRanges.txt" />
+	  <EmbeddedResource Include="TextFiles\InterfaceSegregationPrinciple.txt" />
+	  <EmbeddedResource Include="TextFiles\LiskovSubstitutionPrinciple.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Include="TextFiles\PrivateProtected.txt" />
 	  <EmbeddedResource Include="TextFiles\Protected.txt" />
 	</ItemGroup>
 
@@ -69,9 +96,13 @@
 	  <EmbeddedResource Include="TextFiles\InterfaceNotes.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </EmbeddedResource>
-	  <EmbeddedResource Include="TextFiles\SingleResponsibiltyPrinciple.txt">
+	  <EmbeddedResource Include="TextFiles\ReadonlyMembers.txt" />
+	  <EmbeddedResource Include="TextFiles\SingleResponsibilityPrinciple.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </EmbeddedResource>
+	  <EmbeddedResource Include="TextFiles\SwitchExpressions.txt" />
+	  <EmbeddedResource Include="TextFiles\UsingDeclarations.txt" />
+	  <EmbeddedResource Include="TextFiles\Whitespace.txt" />
 	 
 	</ItemGroup>
 
@@ -80,9 +111,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Include="TextFiles\OpenClosedPrinciple.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		 <MauiXaml Update="Views\CategoriesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CategoriesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\FlashCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SelectedCategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SelectedTopicPage.xaml">
+	    <Generator></Generator>
+	  </MauiXaml>
+	  
 	  <MauiXaml Update="Views\TopicCard.xaml">
 	    <Generator></Generator>
 	  </MauiXaml>
