@@ -11,6 +11,11 @@ namespace FlashCards.Models
         public string CategoryName { get; set; }
         public List<TopicModel> TopicModels { get; set; } = new List<TopicModel>();
 
+        public CategoryModel()
+        {
+                
+        }
+
         public CategoryModel(string name, List<TopicModel> topics)
         {
             CategoryName = name;

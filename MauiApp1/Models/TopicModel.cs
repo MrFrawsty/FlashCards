@@ -12,6 +12,11 @@ namespace FlashCards.Models
 
         public List<FlashCardModel> FlashCards { get; set; }
 
+        public TopicModel()
+        {
+                
+        }
+
 
         public TopicModel(string topicName, List<FlashCardModel> flashCards)
         {
