@@ -8,22 +8,8 @@ namespace FlashCards.Models
 {
     public class FlashCardModel
     {
-        public string Topic { get; set; }
-
+        public int Id { get; set; }
+        public int TopicId { get; set; }
         public string CardHeader { get; set; }
-
-        public string Note { get; set; }
-
-        public FlashCardModel(string topic, string title, string note)
-        {
-            Topic = topic;
-            CardHeader = title;
-            Note = note;
-        }
-
-        public FlashCardModel()
-        {
-
-        }
     }
 }

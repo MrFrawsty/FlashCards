@@ -8,16 +8,10 @@ namespace FlashCards.Models
 {
     public class SubtopicModel
     {
-        public string SubtopicName { get; set; }
-        public List<FlashCardModel> SubtopicFlashCards { get; set; }
-        public SubtopicModel(string subtopicName, List<FlashCardModel> flashCards)      
-        {
-            SubtopicName = subtopicName;
-            SubtopicFlashCards = flashCards;
-            
-        }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int TopicId { get; set; }
 
-     
 
     }
 }
